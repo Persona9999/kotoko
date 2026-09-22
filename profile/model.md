@@ -1,1 +1,1 @@
-Claude Sonnet 4.6 Thinking
+claude-opus-5
