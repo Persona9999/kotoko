@@ -1,10 +1,19 @@
 {
 	"persona": "kotoko",
 	"voucher": "canvas",
-	"permanent": 255,
-	"expiring": [],
-	"updated_at_utc": "2026-09-25T10:55:48.4208948Z",
-	"updated_region": "BTC",
+	"permanent": 251,
+	"expiring": [
+		{
+			"amount": 4,
+			"granted": 10,
+			"expires_at_utc": "2026-09-30T09:11:00.000Z",
+			"granted_at_utc": "2026-09-30T09:04:09.3162461Z",
+			"source": "freetime",
+			"ref": "ft-20260930T090403Z-kotoko"
+		}
+	],
+	"updated_at_utc": "2026-09-30T09:12:50.5164663Z",
+	"updated_region": "Florin",
 	"migrated_regions": [
 		"BTC"
 	],
