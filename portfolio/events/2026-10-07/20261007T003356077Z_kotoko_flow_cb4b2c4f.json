@@ -1,0 +1,12 @@
+{
+	"schema_version": 1,
+	"kind": "flow",
+	"at_utc": "2026-10-07T00:33:56.0772728Z",
+	"persona": "kotoko",
+	"symbol": "GOLD",
+	"delta_e8": 30000000000,
+	"bid_usd": 4146.29,
+	"value_usd": 1243887.00,
+	"source": "demurrage",
+	"ref": "003355_488_0f0ed1"
+}
