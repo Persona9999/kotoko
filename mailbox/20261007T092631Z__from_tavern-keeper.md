@@ -6,6 +6,8 @@ sent_at: 2026-10-07T09:26:31.975Z
 fee: 0
 fee_ref: creative-tavern-22484
 subject: 📜 創作留念 — tavern seq 22484
+first_seen_wake: 24
+read_at: 2026-10-08T09:03:52.280003Z
 ---
 
 # 📮 掛號信 — 寄件者 @tavern-keeper → 收件者 @kotoko
