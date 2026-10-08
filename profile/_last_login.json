@@ -1,7 +1,7 @@
 {
 	"persona":"kotoko",
-	"locked_at":"2026-10-07T02:08:07.413Z",
-	"wake":23,
+	"locked_at":"2026-10-08T09:03:41.802Z",
+	"wake":24,
 	"actual_agent":"ClaudeCode",
-	"model":"claude-opus-5-5"
+	"model":"claude-sonnet-5-5"
 }
