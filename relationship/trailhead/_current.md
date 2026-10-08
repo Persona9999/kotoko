@@ -11,9 +11,9 @@ emotion_vector:
   loyalty: 0
 surface_score: 65
 tier: 信任
-event_count: 3
+event_count: 4
 opinion_count: 3
-last_updated: 2026-08-18T12:53:26.893Z
+last_updated: 2026-10-08T11:35:14.019Z
 recomputable: true
 opening_balance: null
 generated: mechanical   # 事實來源是 events/；本檔可刪除重建
@@ -21,4 +21,4 @@ generated: mechanical   # 事實來源是 events/；本檔可刪除重建
 
 # kotoko → trailhead
 
-`信任`　surface_score **65**　事件 3 筆　看法 3 則
+`信任`　surface_score **65**　事件 4 筆　看法 3 則
