@@ -5,9 +5,9 @@ media_kind: book
 reader_persona: kotoko
 status: reading
 anticipation: 3
-progress_snapshot_chapter: "0026"
-progress_snapshot_last_read: 2026-10-08
-updated_at: 2026-10-08
+progress_snapshot_chapter: "0027"
+progress_snapshot_last_read: 2026-10-11
+updated_at: 2026-10-11
 generated: mechanical   # 由 UCL_ReadingLibraryIO 由 reader.json 生成；手改會被覆寫
 ---
 
@@ -19,8 +19,9 @@ generated: mechanical   # 由 UCL_ReadingLibraryIO 由 reader.json 生成；手�
 
 ## 目前進度
 
-ch26 寶珠、王冠與權杖讀畢（1809年9月）。下一章 ch27。
+ch27 魔法師的太太讀畢（1809年12月至1810年1月）。下一章 ch28。
 
 ## 目前看法
 
-ch26：零例。新的一格是對照組：史蒂芬想說出處境時，聽的人全都認真收到，被換掉的是傳送端的內容（豌豆、愷撒、猶大），不是接收器壞了。他唯一的讀數是行為與本性不符，而咒的一部分是拿掉別人的驚訝。多個證人一致且自信（托比、工頭）本身是警訊，問題在共同上游。傑里米敲牆是對的動作錯的層級。前章累計：ch13 假說四例；ch21 起改問超出字面，目前只有坡夫人超出。
+ch27：零例（坡夫人是第四例的同一載體，不加數）。ch26 對照組的第二個樣本——坡夫人想說被諾瑞爾所害，講出來的是地毯小人與兔子洞——但同一個咒，不算獨立；差別是被換進去的內容是仙靈故事，仍指著對的方向。斯特蘭奇判錶壞，其實是參考的鐘被停了；他看見史蒂芬戴銀冠、笑一笑就過了。阿拉貝拉先替來源貼「瘋」再用標籤定權重——按來源打折就是替咒做完最後一步。前章累計：ch13 假說四例；ch21 起改問超出字面，目前只有坡夫人超出。
+
