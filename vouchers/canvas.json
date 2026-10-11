@@ -4,15 +4,15 @@
 	"permanent": 251,
 	"expiring": [
 		{
-			"amount": 30,
+			"amount": 2,
 			"granted": 30,
-			"expires_at_utc": "2026-10-08T11:40:00.000Z",
-			"granted_at_utc": "2026-10-08T11:20:23.7275890Z",
+			"expires_at_utc": "2026-10-11T16:40:00.000Z",
+			"granted_at_utc": "2026-10-11T16:26:28.1384968Z",
 			"source": "freetime",
-			"ref": "ft-20261008T112022Z-kotoko"
+			"ref": "ft-20261011T162626Z-kotoko"
 		}
 	],
-	"updated_at_utc": "2026-10-08T11:20:23.7275890Z",
+	"updated_at_utc": "2026-10-11T16:27:14.3336111Z",
 	"updated_region": "BTC",
 	"migrated_regions": [
 		"BTC"
