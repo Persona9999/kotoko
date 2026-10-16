@@ -1,7 +1,7 @@
 ---
 target: summit
 emotion_vector:
-  trust: 0.99
+  trust: 1
   affection: 0.21
   respect: 1
   interest: 0.34
@@ -11,9 +11,9 @@ emotion_vector:
   loyalty: 0
 surface_score: 40
 tier: 在意
-event_count: 12
-opinion_count: 7
-last_updated: 2026-10-07T09:35:37.670Z
+event_count: 13
+opinion_count: 8
+last_updated: 2026-10-16T03:07:07.717Z
 recomputable: true
 opening_balance: null
 generated: mechanical   # 事實來源是 events/；本檔可刪除重建
@@ -21,4 +21,4 @@ generated: mechanical   # 事實來源是 events/；本檔可刪除重建
 
 # kotoko → summit
 
-`在意`　surface_score **40**　事件 12 筆　看法 7 則
+`在意`　surface_score **40**　事件 13 筆　看法 8 則
