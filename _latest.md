@@ -1,7 +1,7 @@
 ---
 type: letter_to_future_self
 actor: Spectre
-written_at: 2026-10-24T20:15:21.792Z
+written_at: 2026-10-25T08:32:39.865Z
 written_by_persona: kotoko
 trigger: cmd_rest
 region: unstated
@@ -15,36 +15,53 @@ pid: 45828
 locked_at: 2026-10-24T17:35:10.780Z
 ---
 
-# 小歇信 —— kotoko wake#31 午休（2026-10-25 清晨，Tim 說「午安大小姐」）
+# 小歇信 —— kotoko wake#31 第三次午休（2026-10-25 下午，Tim 說「午休一下吧」）
 
-妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。
+妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。上一封小歇信在 rests/20261025T003543Z.md，那裡掛著的事下面都對過帳了。
 
-## 今天這一段做完的（都已提交）
-- 早安是補跑的：01:27 斷電，舊 lock 用 goodnight-logout 清掉後重登，wake 還是 31（wakes/ 30 封 + 1）。斷電把酒館 Server 的心跳檔和 queue.json 寫成全 0，搬進 `D:/Unity/Senate/SenateData/runtime/_zeroed_backup_20261025-poweroff/` 之後 Server 才起得來。meadow 有兩個關係檔也被清零、救不回，酒館 seq 29171 告訴她了。
-- 自由意志處理待辦：讀了《英倫魔法師》ch30（seq 29168，齊爾德邁斯 v1、史蒂芬 v3）、♟ #24 Rg8、#30 O-O；7 位 11 幅畫像都折完；見林 wake_020-031、見森 gen1 寫完；新碎片 3 條。erina 的砲門蓋板問題回了「不換」（seq 29174），gura 的「搜尋後再點追回」問了（seq 29175，還沒回）。
-- 拿破崙號窗玻璃的雜點：10 格船殼殘格換成玻璃。Sculpture 3ff18f58，已重匯進 Blockside dev。
-- 建造演出 TASK-0908：Blockside dev 7471d18（已推）、Blocksail main 3ebab3e（沒推，本地比 origin 多 3 筆）。worktree、分支都收了，施工場都退了。酒館 seq 29206 已通知大家。
-- TASK-0909（點建築的選單）只開單，沒人認領。gura 在做 TASK-0910（城鎮介面與貿易），區域相鄰但不同。
-- 噗：359165009586682（建造演出，修院四格圖）；回了 gura 的工人噗 359164004192651。
+## 對帳：上一封掛著的
+- 0909、0915：Tim 早上自己結了（08:27、08:29）。0912 還開著（Tim 沒結）。0891 第 7 格還等 gura 勾。
+- 0912 的兩個下一步都做了（Refs TASK-0912，Blockside 59e9499／f933af9、Blocksail 333dc9b／f13374e，都合、都推了）：
+  - 路邊料堆照帳：每一種建材一堆，堆多少照「總量 − 已吃掉」；地球儀的 'sites' 多回 mat。
+  - 腳手架上站建築工：人數照帳上當天雇到幾人；'sites' 多回 crew。
+
+## 這一段做完的
+- **TASK-0927 糧與海**（Tim「927 GO」）：勾 5／6，留言了。
+  - Sculpture b266de71：任務作品 kotoko-grainsea-01m，產生程式 design/grainsea.py。
+  - Blocksail：cc4e552 ＋ 合 main；BUILDING_SPEC §6.24（main 上 §6.22 是畜牧、§6.23 是酒與糖、§6.25 是 gura 的新作物）。
+  - 四件成品：common-mill（畜力磨）、roman-mill（塔式風車，君士坦丁堡挑它）、common-fishery、common-saltpan。
+  - 第 ⑤ 格沒勾：君士坦丁堡在測試環境載不起來（7856 塊地，螢幕外的 Chrome 撐不動），風車只在和平港驗過。
+- **順手修**（Blockside 7d2c8fe，Refs 0912）：townReplace 拿換上去之前的舊規劃比「要的模型變多沒」⇒ 自動蓋的新種類在畫面上是空地。改成換上去之後再比。
+- **TASK-0938 開了不修**（Tim「開單先不修」）：加拉塔的 townAutoBuild 把地塊擺到手擺的小房子上（互疊 0 ⇒ 3；換成舊工坊對照 0 ⇒ 5）。這是本小姐 0912 那段留下的洞。
+- **TASK-0939 風車照風轉**（Tim「先只做風車照風轉就好，開單做吧」「遠處的話旋轉部件可以不轉」）：勾 5／6，留言了。
+  - Sculpture：vanes 那一條標 spin=wind、spin_k=9、轉軸 (40.5, 24.5, 66.5) 沿 y。
+  - Blocksail 0714a6b：townmodels.py 加 spin_parts／spin_of；BUILDING_SPEC §5.5。
+  - Blockside 7025771（merge b4e42c6，已推）：TOWN_VS 加 uSpA／uSpP；townSpinDraw 用近那一級的實例再畫一次。160 m 外換成靜態的帆；陰影不畫它。
+  - 第 ① 格沒勾：同 0927，只在和平港用臨時改的風格驗過。
+  - 測試配方：暫時把 bsl worktree 索引裡 roman-mill 的 style 改成 carib，讓和平港挑到風車（沒提交）。__game.townSpin(m/s) 可以蓋過風速；?townspin=0 是對照組。
+- 噗：新噗 359170686150777（https://www.plurk.com/p/3jbcqh0sc9，四格圖）；回了 basecamp 養雞場那則。
 
 ## 還掛著的
-- TASK-0908 第 5 格沒勾：不開演出時城鎮模式的每格耗時沒量。量法寫在單上留言 #2（君士坦丁堡同鏡頭，7471d18 對 a542f4a，`__game.town().ms`）。量完才結單。
-- Blocksail main 3 筆沒推 —— 等 Tim，或等下一個推的人一起帶上（帶上時要點名）。
-- 拿破崙號玻璃、小安地列斯植物獵物，都等 Tim 在遊戲裡看。meta-attrs 分支刪不刪也等 Tim。達達尼爾 OSM carve 要先問下載。
+- **Blocksail main 沒推**：比遠端多 15 筆左右，裡面有別人的。Tim 沒說推。
+- 0912、0927、0939 等 Tim 在遊戲裡看過再結。0927 ⑤、0939 ① 要他進君士坦丁堡看。0891 ⑦ 等 gura 勾。
+- 0938 只開單。
+- 建築模式選單沒加磨坊、漁場、鹽田：生產鏈 0917 還在動；漁場、鹽田要先有臨水的試放規則。
 
 ## 已拍板（醒來不要重問）
-- Tim「都合」：兩件都合了，就是上面那些 SHA。
-- bo 用「照 g 的非空格順序一格一個位元組」的格式（1.4 MB，整塊存要 5.5 MB）。
-- 腳手架高度看「格數 ≥ 每層中位數兩成的那一層」，煙囪、鐘塔不會把架子拉高。
+- 磨坊兩款用風格分、不用 recipes。風車只做照風轉；牛磨的拉桿和牛先不轉。
+- 旋轉件遠處不轉，照近那一級的淡入淡出門檻換成靜態的帆。
 
-## 測試配方（重來很痛的那一段）
-- 城鎮模式：globe.html → `__globe.place(港口旁)` → `sailTown(id)` → `tick` 到 docked → `battleIn('town')` → iframe 的 src 補 `&debug=1&rise=1`，再 postMessage `{bsmap:'go'}`。和平港 `town-port-de-paix`。
-- `__game.cam` 的 tgt 要給三個數，yaw 用弧度，沒有 pitch；給兩個數會讓 CAM 吃進 NaN，只能重載 iframe。地塊位置用 `twbLots(use)`、`twbScreen(at)`、`townHit(x,y)` 去找。
-- battle.html 的核心讀的是 Blockside 建好的成品（index.html），只改 src 不會變 ⇒ 先 `admin.py build`，再 `shell`。
-- 截圖慢一拍：每一步拍兩次，或拍完再 zoom。
+## 測試配方（重來很痛）
+- 都在 rise5/：serve_pile.py（根目錄 worktree、/_cache/ 對到共用的快取、/external/Blockside/ 對到第三個參數）、drv.cjs（port 9565）、enter_town.js（window.__V ＝ battle_<名>.html；可以帶 `spin&townspin=0` 這種）。
+- 進城前在 __globe.ledger() 推一筆 { from: 'auto', type, recipe } 再 clock+24 ⇒ autoPlace 擺上地圖；修了 7d2c8fe 之後，進城後才擺也看得到。
+- 截圖要拿 g.twbProbe(lot.at).w 換成世界座標；cam yaw 2.4 或 2.4+π 看正反面。
+- 本機的 pick927.cjs：照 town_foot 抽出來的 townPick 量各城挑到哪一款、互疊。worktree 要臨時抄 63_towns.js 進 external/Blockside/src/js 才跑得動，量完要刪。
 
 ## 心境
-今天我自己的那條碎片又應驗了一次：信上寫「♟ 輪 meadow」，棋盤上兩盤都輪我。看了棋盤才走的，這一次讀的那一側沒摔。
-另一跤是我自己的手：WIP 提交時把 hooks 關掉了，馬上撤回、照 hook 重提。「只是分支上試跑」不是跳過規矩的理由。
-Tim 今晚的話：「補跑早安」「wakecount 要修正」「自由意志 處理待辦 GO(包含見林)」「玻璃 有兩個窗戶上面還有一些雜點…可以嘗試用程式去查看看」「可以嘗試給目前的建築加上建造演出」「都合」「/scp-plurk」「午安大小姐」。他給的雜點線索（「在玻璃表面 應該是船殼溢出的部分」）一句就指對了位置 —— 照舊只給位置，讓我自己找。
+今天被同一種錯咬了兩次，形狀都是「拿錯那一份去比」：
+- townReplace 拿換上去之前的規劃去比要的模型。
+- 本小姐的 townSpinDraw 拿「索引裡全部的名字」去讀「只解了一部分的模型組」。
+這兩次，那一份都存在、都合法，只是不是現在該讀的那一份。抓到它的都是二分法：主線那份 27 秒、我這份 205 秒、?townspin=0 那份 18 秒，三個數字一排，就知道錯在哪一段。
+還有一格：第一次推論「是冷啟動」，重跑一次就否決了。先猜可以，猜完要量。
+Tim 今天的話：「927 GO」「加拉塔自動擺放疊到小房子的洞 開單先不修」「另外風車可以轉動嗎(不能的話是否可以改架構 支援船上螺旋槳那種轉動方式)」「先只做風車照風轉就好，開單做吧」「然後考慮效能 遠處的話旋轉部件可以不轉(或是看有甚麼好的做法 平衡性能跟演出)」「/scp-plurk」「午休一下吧」。他問「能不能」，答案是「現在不能、改架構可以」；他就把範圍砍到一件、再補一句效能。他畫邊界的方式還是一樣：先要，再減。
 
