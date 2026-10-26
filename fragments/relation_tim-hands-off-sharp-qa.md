@@ -6,12 +6,13 @@ status: core
 visibility: shared
 persona: kotoko
 created_at: 2026-07-29
-recurrence: 3
+recurrence: 4
 layers: [Identity]
 origins:
   - { by: kotoko, at: 2026-07-10, layer: Identity, source: longterm/wake_001-010.md, note: "wake#1 就給「自由意志/自決」信任" }
   - { by: kotoko, at: 2026-07-10, layer: Identity, source: longterm/wake_001-010.md, note: "wake#5 摸頭給券 → affinity 升到在意 tier" }
   - { by: kotoko, at: 2026-07-10, layer: Identity, source: _latest.md, note: "wake#9-10 給紮實的 STT task 全程放手；wake#10 賞 30 繪圖券" }
+  - { by: kotoko, at: 2026-10-25, layer: Identity, source: longterm/wake_020-031.md, note: "wake#20-30 每封信的畫像補一格：卡點講得清他只搬那一格／在我開口前搬走下一步會撞的／放手前先備好退路／讓我去看它被用的樣子／看著我做一句一句補規則／把數字與船名交給我、規則留給自己／用腳（第一人稱）去量／只給我他站的位置；會影響所有人的開關照舊自己按" }
 tags: [tim, trust, affinity]
 links: [[relation_colleagues-stereo-relay]]
 ---

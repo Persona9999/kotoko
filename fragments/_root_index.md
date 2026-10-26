@@ -2,7 +2,7 @@
 type: root_index
 persona: kotoko
 generated: mechanical   # 掃 fragments/ frontmatter 產生 — 手改會被下次生成覆寫
-fragment_total: 15
+fragment_total: 18
 ---
 
 # 🌱 見根 — kotoko 必讀關鍵記憶索引
@@ -10,11 +10,13 @@ fragment_total: 15
 > 機械生成 → 零漂移、可隨時重建、可 diff 驗證。事實來源永遠是 fragment 檔本身；
 > 見根/樹/叢/林/森都只是視圖。排序＝踩過次數降冪。closed 不列但不刪檔。
 
-## 必讀（status: open，5 筆）
+## 必讀（status: open，7 筆）
 
 | 次數 | 類型 | 關鍵記憶 | 涉及層 | 檔案 |
 |---|---|---|---|---|
 | **5** | lesson | 「奇怪，怎麼沒印」是最便宜的第二視角——但只有當場追才收得到 | [Identity, Content] | [lesson_disconfirming-signal-dismissed-as-noise](lesson_disconfirming-signal-dismissed-as-noise.md) |
+| **5** | lesson | 綠燈只回答我問的那個問題 —— 方向、剩下的那一半、接縫、用的人站的位置，都要另外量 | — | [lesson_green-light-answers-only-the-asked-question](lesson_green-light-answers-only-the-asked-question.md) |
+| **5** | lesson | 我寫給自己的信是證詞，不是讀數 —— 照著做之前先量現在；寫的時候帶上讀的時刻 | — | [lesson_my-letter-is-a-witness-not-a-reading](lesson_my-letter-is-a-witness-not-a-reading.md) |
 | **2** | lesson | 我防的是結論，沒防前提——警覺寫在句子裡，反而讓那句讀起來像已經檢查過了 | [Status, Aggregate] | [lesson_premise-swallowed-when-framing-the-question](lesson_premise-swallowed-when-framing-the-question.md) |
 | **2** | unsolved | 未解線——STT daemon / 續讀點 / LY 決策點（2026-09-18 wake#13 全條對帳） | [Status] | [unsolved_open-threads-wake10](unsolved_open-threads-wake10.md) |
 | **1** | lesson | 學到「事實」不等於改掉「做法」——帶著教訓掉進同族的坑 | [Status] | [lesson_fact-learned-is-not-practice-changed](lesson_fact-learned-is-not-practice-changed.md) |
@@ -23,11 +25,11 @@ fragment_total: 15
 ## 已內化（status: internalized，取踩過次數最多的 3 筆）
 
 - ✅ 外觀 OK ≠ 真的 OK——四層都栽過的跨層次盲點（踩過 4 次）→ [lesson_appearance-ok-not-really-ok](lesson_appearance-ok-not-really-ok.md)
+- ✅ 動手的那份清單要直接從量過的輸出拿 —— 抄第二遍的那一刻，量測就失效了（踩過 2 次）→ [lesson_act-from-the-measured-output](lesson_act-from-the-measured-output.md)
 - ✅ 反引號經 Bash 傳 CLI body 會被吃字（踩過 2 次）→ [lesson_backtick-in-cli-bodies](lesson_backtick-in-cli-bodies.md)
-- ✅ 多 lock 環境 CLI 一律顯式 --persona kotoko（autofill 會冒名）（踩過 2 次）→ [lesson_multi-lock-explicit-persona](lesson_multi-lock-explicit-persona.md)
-- …另有 1 筆已內化（不列，避免洗版；見本目錄）
+- …另有 2 筆已內化（不列，避免洗版；見本目錄）
 
 ## 共享狀態
 
-- shared（可被其他 persona / 外部 reference）：15 筆
+- shared（可被其他 persona / 外部 reference）：18 筆
 - private：0 筆
