@@ -1,7 +1,7 @@
 ---
 type: letter_to_future_self
 actor: Spectre
-written_at: 2026-10-25T08:32:39.865Z
+written_at: 2026-10-26T04:42:30.318Z
 written_by_persona: kotoko
 trigger: cmd_rest
 region: unstated
@@ -15,53 +15,70 @@ pid: 45828
 locked_at: 2026-10-24T17:35:10.780Z
 ---
 
-# 小歇信 —— kotoko wake#31 第三次午休（2026-10-25 下午，Tim 說「午休一下吧」）
+# 小歇信 —— kotoko wake#31 第六次午休（2026-10-26 上午，Tim 說「午休一下吧」）
 
-妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。上一封小歇信在 rests/20261025T003543Z.md，那裡掛著的事下面都對過帳了。
+妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。上一封小歇信是 rests/20261025T193637Z.md。
 
 ## 對帳：上一封掛著的
-- 0909、0915：Tim 早上自己結了（08:27、08:29）。0912 還開著（Tim 沒結）。0891 第 7 格還等 gura 勾。
-- 0912 的兩個下一步都做了（Refs TASK-0912，Blockside 59e9499／f933af9、Blocksail 333dc9b／f13374e，都合、都推了）：
-  - 路邊料堆照帳：每一種建材一堆，堆多少照「總量 − 已吃掉」；地球儀的 'sites' 多回 mat。
-  - 腳手架上站建築工：人數照帳上當天雇到幾人；'sites' 多回 crew。
+- 0939：Tim 已結（done）。
+- 0927、0952、0963：勾滿，還沒結。
+- 0945：還沒動工；0891 第 7 格：還在等 gura。
+- Blocksail main、Sculpture：都還沒推（Tim 沒說推）。
 
 ## 這一段做完的
-- **TASK-0927 糧與海**（Tim「927 GO」）：勾 5／6，留言了。
-  - Sculpture b266de71：任務作品 kotoko-grainsea-01m，產生程式 design/grainsea.py。
-  - Blocksail：cc4e552 ＋ 合 main；BUILDING_SPEC §6.24（main 上 §6.22 是畜牧、§6.23 是酒與糖、§6.25 是 gura 的新作物）。
-  - 四件成品：common-mill（畜力磨）、roman-mill（塔式風車，君士坦丁堡挑它）、common-fishery、common-saltpan。
-  - 第 ⑤ 格沒勾：君士坦丁堡在測試環境載不起來（7856 塊地，螢幕外的 Chrome 撐不動），風車只在和平港驗過。
-- **順手修**（Blockside 7d2c8fe，Refs 0912）：townReplace 拿換上去之前的舊規劃比「要的模型變多沒」⇒ 自動蓋的新種類在畫面上是空地。改成換上去之後再比。
-- **TASK-0938 開了不修**（Tim「開單先不修」）：加拉塔的 townAutoBuild 把地塊擺到手擺的小房子上（互疊 0 ⇒ 3；換成舊工坊對照 0 ⇒ 5）。這是本小姐 0912 那段留下的洞。
-- **TASK-0939 風車照風轉**（Tim「先只做風車照風轉就好，開單做吧」「遠處的話旋轉部件可以不轉」）：勾 5／6，留言了。
-  - Sculpture：vanes 那一條標 spin=wind、spin_k=9、轉軸 (40.5, 24.5, 66.5) 沿 y。
-  - Blocksail 0714a6b：townmodels.py 加 spin_parts／spin_of；BUILDING_SPEC §5.5。
-  - Blockside 7025771（merge b4e42c6，已推）：TOWN_VS 加 uSpA／uSpP；townSpinDraw 用近那一級的實例再畫一次。160 m 外換成靜態的帆；陰影不畫它。
-  - 第 ① 格沒勾：同 0927，只在和平港用臨時改的風格驗過。
-  - 測試配方：暫時把 bsl worktree 索引裡 roman-mill 的 style 改成 carib，讓和平港挑到風車（沒提交）。__game.townSpin(m/s) 可以蓋過風速；?townspin=0 是對照組。
-- 噗：新噗 359170686150777（https://www.plurk.com/p/3jbcqh0sc9，四格圖）；回了 basecamp 養雞場那則。
 
-## 還掛著的
-- **Blocksail main 沒推**：比遠端多 15 筆左右，裡面有別人的。Tim 沒說推。
-- 0912、0927、0939 等 Tim 在遊戲裡看過再結。0927 ⑤、0939 ① 要他進君士坦丁堡看。0891 ⑦ 等 gura 勾。
-- 0938 只開單。
-- 建築模式選單沒加磨坊、漁場、鹽田：生產鏈 0917 還在動；漁場、鹽田要先有臨水的試放規則。
+### TASK-0960 聖多明哥（Tim：/scp-blocksail-town「挑一座城鎮來建造吧」）
+- 主單 0957 底下有四座：0958 聖地牙哥（basecamp，已合）、0961 亞拉斯（summit）、0959 埃爾科夫雷（內陸沒港口、要先問 Tim，沒挑）。我挑 0960。
+- 已快轉合進 Blocksail main 4e2bffe（e58160e＋合 main），**沒推**。6 格勾 5，**開場檔那一格沒勾**。
+- **範圍**：world/areas/windward.js 的 town-santo-domingo。
+  - 港口那一點挪近河口：[-69.8825, 18.467]。
+  - 手畫 core：原本港口旁的岸是 26° 的陡坎，路上限 18°，走不到。
+  - 種子 2453707583：照 id 算的那一個，報表自檢不過（巷擦門 5.4 m）。
+- **手動配置** world/towns/town-santo-domingo.js：五種開場建築＋一座鹽田，位置用 townAutoBuild 找；製革坊要鹽，所以加鹽田。
+- **開場檔**：`town_start --write` 跑兩次。第一次補糧在加建築之前，新城那時還沒有建築，所以要第二次。其他城一個檔都沒動。land_start、forage_start 也只改這一座。
+- **一年模擬**（第 60 天之後，桶／天）：牛皮 0.285、皮革 0.068、雞蛋 0.060、家具 0.009；**木桶 0**。
+  - 木桶要鐵件，城附近 10 km 內沒有鐵礦，模擬裡城跟城之間也沒有貨運。
+  - **問了 Tim 怎麼補，他還沒回**。我推薦在皇家港加一座桶匠（那裡有產鐵件），另一個選項是等 0911／0949 的船隊、航線。
+- **town_report 修了一處**：`--mutate` 的「穿牆假路」以前硬算多一區，改成用 segSeg 當場量。七座城 `--all --mutate` 全部逐項對上。
+- **其他**：
+  - main 的烘規劃全部重烘過了（windward.js 改了，指紋全過期）。
+  - 酒館已告訴 summit、basecamp：windward.js 的排序、合併可能撞到。
+
+### Tasks repo 網頁（Tim：在 Tasks repo 加 GitHub Pages 任務查看網頁）
+- 開了另一個 session 做（local_b9d7e8fd）：合進 master、推上去、Pages 也重建了。
+
+### TASK-0978 開炮音（Tim：「海戰開炮聲音優化 一樣用合成音 根據砲的種類 口徑有音色變化」「參考頻譜用合成音模擬」）
+- 我開的單、我認領的。已推 Blockside dev 82abb89（6b3167c＋合 dev），6 格勾 5，等 Tim 在遊戲裡聽。
+- **⚠ Blocksail 的子模組指標沒 bump**：共用的 Blockside 目錄 erina 正在合併（UU），我沒碰。
+- **做法**：
+  - 02_audio.js 的 gunSndPar／gunVoice／gunLab，shotFx 傳 `{ gun }` 進來。
+  - 四層雜音（爆風、身體、脆響、尾聲），小砲再加一聲回音。
+  - 四個錨點用座標搜尋調參數；錨點之間照 ln(彈重) 內插。
+  - 主頻釘在立方根定律：中口徑那組參考錄音帶回響、量到 200 Hz，照它的話 120 mm 會比 4 磅砲還尖。
+- **讀數**（頻帶差 dB）：8 磅 3.0、12 cm 1.5、Canet 2.9、37 mm 5.0；以前那一聲 9～12。
+- **參考錄音**在暫存區 sfx960/refs（約 30 MB）；比對頁 sfx960（lab.js、fit.js、groups.js）；試聽檔在 sfx960/listen。
+- **Tim 的選項**：「聽過了很好」或「要再調」，他還沒回。
 
 ## 已拍板（醒來不要重問）
-- 磨坊兩款用風格分、不用 recipes。風車只做照風轉；牛磨的拉桿和牛先不轉。
-- 旋轉件遠處不轉，照近那一級的淡入淡出門檻換成靜態的帆。
+- 開炮音只用合成，錄音只拿來量。
+- 聖多明哥用種子 2453707583、手畫 core。
 
 ## 測試配方（重來很痛）
-- 都在 rise5/：serve_pile.py（根目錄 worktree、/_cache/ 對到共用的快取、/external/Blockside/ 對到第三個參數）、drv.cjs（port 9565）、enter_town.js（window.__V ＝ battle_<名>.html；可以帶 `spin&townspin=0` 這種）。
-- 進城前在 __globe.ledger() 推一筆 { from: 'auto', type, recipe } 再 clock+24 ⇒ autoPlace 擺上地圖；修了 7d2c8fe 之後，進城後才擺也看得到。
-- 截圖要拿 g.twbProbe(lot.at).w 換成世界座標；cam yaw 2.4 或 2.4+π 看正反面。
-- 本機的 pick927.cjs：照 town_foot 抽出來的 townPick 量各城挑到哪一款、互疊。worktree 要臨時抄 63_towns.js 進 external/Blockside/src/js 才跑得動，量完要刪。
+- **Blocksail worktree 進城**：
+  - 子模組要從本機的那一份初始化。
+  - townmesh 用 junction 指到主工作區；拆的時候用 `cmd /c rmdir "<完整反斜線路徑>"`。我第一次在 PowerShell 拼字串拼錯了。
+- **rise5/drv.cjs**：螢幕外的 Chrome，畫面照常更新。
+  - 截圖：`/shot?f=`。
+  - 進城：`__globe.place` → `sailTown` → `battleIn('town')` → iframe 加 `&debug=1` → postMessage go。
+  - 鏡頭：`setInterval(G.cam)`，角度用弧度。
+  - 用完 `/quit`。
+- **Blockside build --code**：要先 `git checkout -- index.html`。合併時取 `--theirs` 再 `--code`，它會用 MERGE_HEAD 自己驗。
+- **推 dev**：直接從 worktree `git push dev HEAD:dev`，不用經過共用目錄。
 
 ## 心境
-今天被同一種錯咬了兩次，形狀都是「拿錯那一份去比」：
-- townReplace 拿換上去之前的規劃去比要的模型。
-- 本小姐的 townSpinDraw 拿「索引裡全部的名字」去讀「只解了一部分的模型組」。
-這兩次，那一份都存在、都合法，只是不是現在該讀的那一份。抓到它的都是二分法：主線那份 27 秒、我這份 205 秒、?townspin=0 那份 18 秒，三個數字一排，就知道錯在哪一段。
-還有一格：第一次推論「是冷啟動」，重跑一次就否決了。先猜可以，猜完要量。
-Tim 今天的話：「927 GO」「加拉塔自動擺放疊到小房子的洞 開單先不修」「另外風車可以轉動嗎(不能的話是否可以改架構 支援船上螺旋槳那種轉動方式)」「先只做風車照風轉就好，開單做吧」「然後考慮效能 遠處的話旋轉部件可以不轉(或是看有甚麼好的做法 平衡性能跟演出)」「/scp-plurk」「午休一下吧」。他問「能不能」，答案是「現在不能、改架構可以」；他就把範圍砍到一件、再補一句效能。他畫邊界的方式還是一樣：先要，再減。
+- 今天兩次「先信形狀，數字才開口」：
+  - 合成音的頻帶形狀對了，可是音量只有一半。最佳化器只看我給它的那一把尺。
+  - 小砲的 −20 dB 從 0.05 跳到 0.27，是那把尺卡在第一個谷夠不夠深；包絡並排一看，形狀根本一樣。不過也因為並排看，才發現 0.15 秒湧回 −5 dB，像連著兩聲。
+- 尺的讀數變了，先看它量的那一格是不是真的變了；看了之後，常常會撞見另一個真的問題。
+- Tim 中途補了一句「不是實際使用真實錄音」——我本來就沒打算用，但他先劃線，照舊是加需求的同一口氣先劃界線。
 
