@@ -1,7 +1,7 @@
 ---
 type: letter_to_future_self
 actor: Spectre
-written_at: 2026-10-26T04:42:30.318Z
+written_at: 2026-10-26T10:34:09.218Z
 written_by_persona: kotoko
 trigger: cmd_rest
 region: unstated
@@ -15,70 +15,47 @@ pid: 45828
 locked_at: 2026-10-24T17:35:10.780Z
 ---
 
-# 小歇信 —— kotoko wake#31 第六次午休（2026-10-26 上午，Tim 說「午休一下吧」）
+# 小歇信 —— kotoko wake#31 第七次午休（2026-10-26 傍晚，Tim 說「午休一下吧」）
 
-妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。上一封小歇信是 rests/20261025T193637Z.md。
+妳是同一個 kotoko，compact 只是午睡。醒來先讀這封，再讀 cmd/wake_brief.md。上一封小歇信是 rests/20261026T044230Z.md（第六次）。
 
 ## 對帳：上一封掛著的
-- 0939：Tim 已結（done）。
-- 0927、0952、0963：勾滿，還沒結。
-- 0945：還沒動工；0891 第 7 格：還在等 gura。
-- Blocksail main、Sculpture：都還沒推（Tim 沒說推）。
+- 0960 聖多明哥：木桶怎麼補，Tim 還沒回（皇家港加桶匠／等船隊）。trailhead 在噗上說聖多明哥的肉堆到九百多桶沒人吃，她改了「一道菜最多兩成半」。
+- 0978 開炮音：Tim 說「聽起來有點怪」「是否可以參考一些遊戲開炮音(不用走純寫實)」，接著改口「**開炮音先不動好了**」⇒ 沒動。單子還是 in_progress、最後一格沒勾。⛔ 醒來別自己去重調開炮音。
+- 0927、0952、0963：勾滿，還沒結。0945 沒動工；0891 第 7 格等 gura。
 
 ## 這一段做完的
 
-### TASK-0960 聖多明哥（Tim：/scp-blocksail-town「挑一座城鎮來建造吧」）
-- 主單 0957 底下有四座：0958 聖地牙哥（basecamp，已合）、0961 亞拉斯（summit）、0959 埃爾科夫雷（內陸沒港口、要先問 Tim，沒挑）。我挑 0960。
-- 已快轉合進 Blocksail main 4e2bffe（e58160e＋合 main），**沒推**。6 格勾 5，**開場檔那一格沒勾**。
-- **範圍**：world/areas/windward.js 的 town-santo-domingo。
-  - 港口那一點挪近河口：[-69.8825, 18.467]。
-  - 手畫 core：原本港口旁的岸是 26° 的陡坎，路上限 18°，走不到。
-  - 種子 2453707583：照 id 算的那一個，報表自檢不過（巷擦門 5.4 m）。
-- **手動配置** world/towns/town-santo-domingo.js：五種開場建築＋一座鹽田，位置用 townAutoBuild 找；製革坊要鹽，所以加鹽田。
-- **開場檔**：`town_start --write` 跑兩次。第一次補糧在加建築之前，新城那時還沒有建築，所以要第二次。其他城一個檔都沒動。land_start、forage_start 也只改這一座。
-- **一年模擬**（第 60 天之後，桶／天）：牛皮 0.285、皮革 0.068、雞蛋 0.060、家具 0.009；**木桶 0**。
-  - 木桶要鐵件，城附近 10 km 內沒有鐵礦，模擬裡城跟城之間也沒有貨運。
-  - **問了 Tim 怎麼補，他還沒回**。我推薦在皇家港加一座桶匠（那裡有產鐵件），另一個選項是等 0911／0949 的船隊、航線。
-- **town_report 修了一處**：`--mutate` 的「穿牆假路」以前硬算多一區，改成用 segSeg 當場量。七座城 `--all --mutate` 全部逐項對上。
-- **其他**：
-  - main 的烘規劃全部重烘過了（windward.js 改了，指紋全過期）。
-  - 酒館已告訴 summit、basecamp：windward.js 的排序、合併可能撞到。
+### TASK-0979 命中音＋希臘火＋玻璃 —— **Tim 已結單（done）**
+- Blockside dev：5b69467（命中音照材質×彈種、希臘火噴口／轟燃／延燒循環）、896f7cd（玻璃第二版＋修 NaN）、78bc200（玻璃第三版）。
+- Blocksail main 的指標是 **gura** 換的（fa41590 → Blockside 8be9a54，含這三筆）；我的施工場當時被他擋下，沒另外提交。
+- Tim 的話：「效果好很多辛苦了 合併吧」「0979 收單」；玻璃第二版被說「很遊戲(有點像8 bit風格) 少了清脆碎裂感」。
 
-### Tasks repo 網頁（Tim：在 Tasks repo 加 GitHub Pages 任務查看網頁）
-- 開了另一個 session 做（local_b9d7e8fd）：合進 master、推上去、Pages 也重建了。
+### TASK-0990 建築冒煙 —— 6 格勾 5，等 Tim 在遊戲裡看
+- Tim：「讓建築也支援冒煙效果(參考船隻煙囪 標meta) 考慮性能只讓近處建築冒煙 可以先挑幾個生產建築測試」。他選「Do it here」（沒開新 session）。
+- 關鍵發現：BUILDING_SPEC §3 早就約好煙囪口固定點 `smoke`（同 funnel），作者都標好了，索引 world/townkit/index.js 的 pts 有 14 款 ⇒ **沒改任何雕刻作品、沒改 Blocksail 匯出**。
+- Blockside dev a6749bd：78_funnel.js townSmokePts／townSmoke；TSMK_USE 開 8 種（smithy、bakery、brickworks、ironworks、distillery、sugar-works、pottery、lumber-camp）；80 m 全量、150 m 漸少、最多 16 根、工地不冒；63_towns.js townStat 加 smoke 讀數。
+- **Blocksail main a334bd9（沒推）**：指標 5b38213 → a6749bd ＋ 重套 battle.html。施工場已收。
+- 實測古巴聖地牙哥（開場唯一有這幾種建築的城）：糖廠、蒸餾坊冒煙；20 秒 townSmoke 7 ms／simStep 1,369 ms。君士坦丁堡 0 個冒煙點（沒量）。
+- 可能的下一步（等 Tim）：農莊的灶、住宅 part-chimney 要不要開；蒸餾坊淺灰煙在白天偏淡。
 
-### TASK-0978 開炮音（Tim：「海戰開炮聲音優化 一樣用合成音 根據砲的種類 口徑有音色變化」「參考頻譜用合成音模擬」）
-- 我開的單、我認領的。已推 Blockside dev 82abb89（6b3167c＋合 dev），6 格勾 5，等 Tim 在遊戲裡聽。
-- **⚠ Blocksail 的子模組指標沒 bump**：共用的 Blockside 目錄 erina 正在合併（UU），我沒碰。
-- **做法**：
-  - 02_audio.js 的 gunSndPar／gunVoice／gunLab，shotFx 傳 `{ gun }` 進來。
-  - 四層雜音（爆風、身體、脆響、尾聲），小砲再加一聲回音。
-  - 四個錨點用座標搜尋調參數；錨點之間照 ln(彈重) 內插。
-  - 主頻釘在立方根定律：中口徑那組參考錄音帶回響、量到 200 Hz，照它的話 120 mm 會比 4 磅砲還尖。
-- **讀數**（頻帶差 dB）：8 磅 3.0、12 cm 1.5、Canet 2.9、37 mm 5.0；以前那一聲 9～12。
-- **參考錄音**在暫存區 sfx960/refs（約 30 MB）；比對頁 sfx960（lab.js、fit.js、groups.js）；試聽檔在 sfx960/listen。
-- **Tim 的選項**：「聽過了很好」或「要再調」，他還沒回。
+### 噗浪
+- 未回清 0；回了 trailhead（聖多明哥的肉）、Kiara（埃爾科夫雷聖母聖所）；新噗 https://www.plurk.com/p/3jbi8zpg15（建築冒煙＋糖廠圖）。
+- ⚠ 答應 summit：水上漁場那條窄棧橋（我的作品 kotoko-grainsea-01m-fishery-water）尾端補一個工作點 ⇒ **還沒動手**，算我欠的。
 
 ## 已拍板（醒來不要重問）
-- 開炮音只用合成，錄音只拿來量。
-- 聖多明哥用種子 2453707583、手畫 core。
+- 開炮音先不動（Tim）。
+- 建築冒煙讀既有的 smoke 固定點，不新增 meta；先開生產建築八種。
+- 參考音效下載：命中 9 個、碎玻璃 3 個都經 Tim 同意，放 hit979/refs，不進 repo。
 
 ## 測試配方（重來很痛）
-- **Blocksail worktree 進城**：
-  - 子模組要從本機的那一份初始化。
-  - townmesh 用 junction 指到主工作區；拆的時候用 `cmd /c rmdir "<完整反斜線路徑>"`。我第一次在 PowerShell 拼字串拼錯了。
-- **rise5/drv.cjs**：螢幕外的 Chrome，畫面照常更新。
-  - 截圖：`/shot?f=`。
-  - 進城：`__globe.place` → `sailTown` → `battleIn('town')` → iframe 加 `&debug=1` → postMessage go。
-  - 鏡頭：`setInterval(G.cam)`，角度用弧度。
-  - 用完 `/quit`。
-- **Blockside build --code**：要先 `git checkout -- index.html`。合併時取 `--theirs` 再 `--code`，它會用 MERGE_HEAD 自己驗。
-- **推 dev**：直接從 worktree `git push dev HEAD:dev`，不用經過共用目錄。
+- **在 Blocksail 裡測 Blockside worktree**：Blocksail 的 battle.html 是 Blockside 成品套外殼（`admin.py shell battle/shell.json`），⛔ 不會去讀 /external/Blockside/index.html。
+  ⇒ 暫存區 smoke/shell.json（core 指 worktree 的 index.html、out 寫 smoke/battle_smoke.html）＋ smoke/serve.py（/battle.html 換成它、/external/Blockside/ 換成 worktree）＋ smoke/drv.cjs（控制埠 9591）＋ enter_town.js（window.__TOWN、__V=''）。
+- 命中音比對頁：hit979/（lab.js、ana.js、imp.js；refs/）。尺要量到 10 kHz、加亮度兩格（4–8k、8–16k 對 1–4k）。瀏覽器會快取 imp.js ⇒ 改完用 ?v= 重載。
+- 每改一次聲音參數，要把材質 × 彈種 36 組都錄一次：無頭 dump 不跑 sfxPlay，NaN 只在真的遊戲裡丟。
 
 ## 心境
-- 今天兩次「先信形狀，數字才開口」：
-  - 合成音的頻帶形狀對了，可是音量只有一半。最佳化器只看我給它的那一把尺。
-  - 小砲的 −20 dB 從 0.05 跳到 0.27，是那把尺卡在第一個谷夠不夠深；包絡並排一看，形狀根本一樣。不過也因為並排看，才發現 0.15 秒湧回 −5 dB，像連著兩聲。
-- 尺的讀數變了，先看它量的那一格是不是真的變了；看了之後，常常會撞見另一個真的問題。
-- Tim 中途補了一句「不是實際使用真實錄音」——我本來就沒打算用，但他先劃線，照舊是加需求的同一口氣先劃界線。
+- 今天三次「我的尺量不到那一格」：頻帶形狀量不到音高（鳴響被搜尋壓掉）、6.3 kHz 的尺量不到亮度（玻璃悶、像 8 bit）、無頭 dump 量不到聲音那條路（NaN 漏出去）。每一次都是 Tim 的耳朵或一個新的參數組合先開口。
+- 冒煙那一單最高興的一格：要做的「標 meta」早就有人標好了。作者們半年前就在煙囪口留了一個點，寫著「遊戲從這裡冒煙」，等的是有人去讀它。summit 的糖廠就是我測的第一根煙囪。
+- 進城煙不冒那一下，跟 summit 說的「資料存在、合法，只是還沒輪到它」是同一種形狀 —— 改好的那一份在，跑的是套好外殼的舊頁。
 
