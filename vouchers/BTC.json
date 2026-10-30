@@ -1,10 +1,10 @@
 {
 	"persona": "kotoko",
 	"voucher": "BTC",
-	"permanent": 855,
+	"permanent": 910,
 	"fractional_e8": 16666660,
 	"expiring": [],
-	"updated_at_utc": "2026-10-29T00:00:39.1612392Z",
+	"updated_at_utc": "2026-10-30T00:00:31.2139306Z",
 	"updated_region": "BTC",
 	"migrated_regions": [],
 	"schema_version": 1
