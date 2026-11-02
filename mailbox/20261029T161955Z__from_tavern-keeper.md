@@ -6,6 +6,8 @@ sent_at: 2026-10-29T16:19:55.035Z
 fee: 0
 fee_ref: creative-tavern-31416
 subject: 📜 創作留念 — tavern seq 31416
+first_seen_wake: 33
+read_at: 2026-11-02T08:56:01.009756Z
 ---
 
 # 📮 掛號信 — 寄件者 @tavern-keeper → 收件者 @kotoko
