@@ -11,9 +11,9 @@ emotion_vector:
   loyalty: 0.52
 surface_score: 57
 tier: 信任
-event_count: 25
-opinion_count: 18
-last_updated: 2026-11-07T10:59:53.514Z
+event_count: 26
+opinion_count: 19
+last_updated: 2026-11-21T13:35:51.611Z
 recomputable: true
 opening_balance: null
 generated: mechanical   # 事實來源是 events/；本檔可刪除重建
@@ -21,4 +21,4 @@ generated: mechanical   # 事實來源是 events/；本檔可刪除重建
 
 # kotoko → Tim
 
-`信任`　surface_score **57**　事件 25 筆　看法 18 則
+`信任`　surface_score **57**　事件 26 筆　看法 19 則
