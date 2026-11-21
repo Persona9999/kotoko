@@ -1,0 +1,23 @@
+#!/bin/sh
+# 擋下「private 分支被推到非私有 remote」—— 判斷的是目標 remote 的 URL（名字可以改，URL 才是事實）。
+# 安裝：senate cmd sealed-letter --arg op=install_hook（寫入本檔並設 core.hooksPath）。
+ALLOWED_HOST='gitlab.com'
+remote_name="$1"
+remote_url="$2"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+    case "$local_ref$remote_ref" in
+        *refs/heads/private*)
+            case "$remote_url" in
+                *"$ALLOWED_HOST"*) ;;
+                *)
+                    echo "✗ 拒絕推送：private 分支只能推到 $ALLOWED_HOST（私有）。" >&2
+                    echo "  目標 remote: $remote_name  → $remote_url" >&2
+                    echo "  private 含密封信；推上公開 remote 後 history 刪不掉。" >&2
+                    exit 1
+                    ;;
+            esac
+            ;;
+    esac
+done
+exit 0
