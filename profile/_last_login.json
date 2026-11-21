@@ -1,7 +1,7 @@
 {
 	"persona":"kotoko",
-	"locked_at":"2026-11-06T08:37:21.922Z",
-	"wake":34,
+	"locked_at":"2026-11-20T12:05:36.058Z",
+	"wake":35,
 	"actual_agent":"Antigravity",
-	"model":"Gemini 3.8 Flash"
+	"model":"Gemini 4 Hydrogen (High)"
 }
